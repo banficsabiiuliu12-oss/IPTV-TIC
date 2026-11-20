@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPTV-TIC</title>
+<style>
+body {
+  margin: 0;
+  background: #10121d;
+  color: white;
+  font-family: Arial;
+}
+</style>
+</head>
+<body>
+<h1>IPTV-TIC</h1><div style="background:#202438;padding:20px;border-radius:12px;margin:20px;">
+<h2>🔐 ADMIN LOGIN</h2>
 
+<input id="user" placeholder="Username"
+style="padding:12px;width:90%;">
+
+<br><br>
+
+<input id="pass" type="password"
+placeholder="Password"
+style="padding:12px;width:90%;">
+
+<br><br>
+
+<button onclick="login()"
+style="padding:12px;background:#7545ee;color:white;">
+LOGIN
+</button>
+
+<p id="message"></p>
+</div>
+
+<div id="panel" style="display:none;background:#202438;padding:20px;margin:20px;border-radius:12px;">
+<h2>👑 IPTV-TIC ADMIN</h2>
+<p>Bine ai venit, administrator!</p>
+<h3>Panou de administrare</h3>
+<p>Gestionare abonați</p>
+<p>Playlist-uri M3U</p>
+<p>Conturi utilizatori</p>
+</div><script>
+function login() {
+ const user = document.getElementById("user").value;
+ const pass = document.getElementById("pass").value;
+
+ if(user === "admin" && pass === "TIC-2026") {
+  document.getElementById("panel").style.display = "block";
+  document.getElementById("message").textContent = "Conectare reușită!";
+ } else {
+  document.getElementById("message").textContent = "Date incorecte!";
+ }
+}
+</script>
+</body>
+</html>
